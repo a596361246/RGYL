@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="tipContent" content='实验加载中......'>
+    <meta name="tipColor" content='#000000'>
+    <meta name="progressColor" content='#000000'>
+	<meta name="dataCommunicationVersion" content=%DataCommunicationVersion%>
+    <title>虚拟实验</title>
+    <link rel="shortcut icon" href="https://assets.zhihuishu.com/icon/favicon.ico">
+    <link rel="stylesheet" href="https://ar.zhihuishu.com/static/source/style.css">
+    <script src="Build/Common.js"></script>
+    <script src="Build/Common.Command.js"></script>
+    <script src="Build/Common.ScreenRecord.js"></script>
+    <script src="Build/Common.SoundRecord.js"></script>
+    <script src="Build/Common.Toolbar.js"></script>
+    <script src="https://ar.zhihuishu.com/WebglModel/2021/UnityProgress.js"></script>
+
+    <script src="Build/VoiceJs/tts_Js/tts_data.js"></script>
+    <script src="Build/VoiceJs/tts_Js/hmac-sha256.js"></script>
+    <script src="Build/VoiceJs/tts_Js/enc-base64-min.js"></script>
+    <script src="Build/VoiceJs/tts_Js/base64js.js"></script>
+    <script src="Build/VoiceJs/tts_Js/jquery.js"></script>
+    <script src="Build/VoiceJs/tts_Js/index.js"></script>
+    <script src="Build/VoiceJs/iat_Js/iat_data.js"></script>
+    <script src="Build/VoiceJs/iat_Js/hmac-sha256.js"></script>
+    <script src="Build/VoiceJs/iat_Js/enc-base64-min.js"></script>
+    <script src="Build/VoiceJs/iat_Js/jquery.js"></script>
+    <script src="Build/VoiceJs/iat_Js/index.js"></script>
+    <script src="Build/VoiceJs/record_Js/recordmp3.js"></script>
+    <script src="Build/VoiceJs/record_Js/VoiceRecoderDefine.js"></script>
+
+  </head>
+  <body>
+    <div id="unity-container" class="webgl-content">
+	  <canvas id="unity-canvas" style="width: 100vw; height: 102vh"></canvas>
+      <button id="toolBtn" style="position:absolute; left: 95%; bottom: 20px; height: 20px; width: 42px; color: #6A6A6A; background-color:#ffffff;font-size:11px">工具栏</button>
+      <button id="voiceBtn" hidden="true" style="position:absolute; left: 95%; bottom: 50px; height: 42px; width: 42px;border-radius:50%; color: #6A6A6A; background-color:#ffffff;font-size:12px">语音</button>
+      <button id="recordBtn" hidden="true" style="position: absolute; left: 95%; bottom: 100px; height: 42px; width: 42px; border-radius:50%; color: #6A6A6A; background-color:#ffffff;font-size:12px">录屏</button>
+
+      <label id="version" style="position: relative; left: 90%; bottom: 50px; color: #ffffff; background-color:rgba(0,0,0,0);">V1.0.46</label>
+      <label id="explanation" style="position: relative; left: 0%; bottom: 50px; color: #ffffff; "></label>
+    </div>
+    <script>
+	  console.log('WebGLTemplates 1.2.12')
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_WASM
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#endif
+#if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        showBanner: unityShowBanner,
+      };
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
+      }
+      else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "100vw";
+        canvas.style.height = "102vh";
+      }
+      var gameInstance;
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          UnityProgress(progress);
+        }).then((unityInstance) => {
+          gameInstance = unityInstance;
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataCommunication</name>
+    </assembly>
+    <members>
+        <member name="T:WisdomTree.Common.Function.CommandLog">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Communication">
+            <summary>
+            数据通信
+            </summary>
+            <summary>
+            文件上传与下载
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetClassInfoByClassId(System.Int32,System.Action{System.String})">
+            <summary>
+            根据班级id查询班级信息，如班级名称
+            </summary>
+            <param name="classId">班级ID</param>
+            <param name="responseAction">回调</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.Init(System.Action)">
+            <summary>
+            初始化调用方法
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication._Init">
+            <summary>
+            初始化
+            </summary>kl
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.InitEvent">
+            <summary>
+            初始化事件
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.RegisterReceiveAction(System.String,System.Action{System.String})">
+            <summary>
+            注册html接收信息
+            </summary>
+            <param name="identifier"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.Receive(System.String)">
+            <summary>
+            接收js消息被动方法
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.Eval(System.String)">
+            <summary>
+            执行js脚本
+            </summary>
+            <param name="script"></param>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.ExperimentId">
+            <summary>
+            实验id
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.CourseId">
+            <summary>
+            课程id
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.UUID">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.TaskId">
+            <summary>
+            任务Id
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.StepId">
+            <summary>
+            步骤Id
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.PlatformType">
+            <summary>
+            对接平台 1：重庆市级平台 0：Ilab+其他省区平台
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.LocationParams">
+            <summary>
+            实验地址的所有Get参数
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.LocationUrl">
+            <summary>
+            实验地址
+            </summary>
+        </member>
+        <member name="P:WisdomTree.Common.Function.Communication.IsSchoolPlatform">
+            <summary>
+            是否为校级平台实验
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._UUID">
+            <summary>
+            用户uuid
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.TestUser.Nologin">
+            <summary>
+            游客
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.TestUser.User1">
+            <summary>
+            用户1
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.TestUser.User2">
+            <summary>
+            用户2
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.SetTestUser(WisdomTree.Common.Function.Communication.TestUser)">
+            <summary>
+            设置测试用户
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.InitEvent_BaseInfo">
+            <summary>
+            发布dll时这里的方法要改
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadText(System.String,System.String,System.Action{System.String})">
+            <summary>
+            上传文本（实验数据上传保存）
+            </summary>
+            <param name="key">文本标识</param>
+            <param name="data">文本内容</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadText(System.Int32,System.String,System.String,System.Action{System.String})">
+            <summary>
+            上传文本（实验数据上传保存）
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="key">文本标识</param>
+            <param name="data">文本内容</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadText(System.String,System.String,System.String,System.Action{System.String})">
+            <summary>
+            上传文本（实验数据上传保存）
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="key">文本标识</param>
+            <param name="data">文本内容</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadText(System.Int32,System.String,System.String,System.String,System.Action{System.String})">
+            <summary>
+            上传文本（实验数据上传保存）
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="uuid">用户ID</param>
+            <param name="key">文本标识</param>
+            <param name="data">文本内容</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadText(System.String,System.Action{System.String})">
+            <summary>
+            获取文本（实验数据读取）
+            </summary>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadText(System.Int32,System.String,System.Action{System.String})">
+            <summary>
+            获取文本（实验数据读取）
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadText(System.String,System.String,System.Action{System.String})">
+            <summary>
+            获取文本（实验数据读取）
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadText(System.Int32,System.String,System.String,System.Action{System.String})">
+            <summary>
+            获取文本（实验数据读取）
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="uuid">用户ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadConfig(System.String,System.Action{System.String})">
+            <summary>
+            获取实验配置（实验数据读取）
+            </summary>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadConfig(System.Int32,System.String,System.Action{System.String})">
+            <summary>
+            获取课程设置（实验数据读取）
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetExperimentKeyConfig(System.Action{System.String[]})">
+            <summary>
+            获取实验配置所有key
+            </summary>
+            <param name="responseAction"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetExperimentKeyUser(System.Action{System.String[]})">
+            <summary>
+            获取用户的所有Key
+            </summary>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetExperimentKeyUser(System.String,System.Action{System.String[]})">
+            <summary>
+            获取用户的所有Key
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetExperimentKeyUser(System.Int32,System.Action{System.String[]})">
+            <summary>
+            获取用户的所有Key
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetExperimentKeyUser(System.Int32,System.String,System.Action{System.String[]})">
+            <summary>
+            获取用户的所有Key
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="uuid">用户ID</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DeleteExperimentKeyUser(System.String,System.Action{System.Boolean})">
+            <summary>
+            删除实验的Key
+            </summary>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DeleteExperimentKeyUser(System.String,System.String,System.Action{System.Boolean})">
+            <summary>
+            删除实验的Key
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DeleteExperimentKeyUser(System.Int32,System.String,System.Action{System.Boolean})">
+            <summary>
+            删除实验的Key
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DeleteExperimentKeyUser(System.Int32,System.String,System.String,System.Action{System.Boolean})">
+            <summary>
+            删除实验的Key
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="uuid">用户ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetExperimentKey(System.Action{System.Collections.Generic.List{System.String}})">
+            <summary>
+            获取该实验的所有Key
+            </summary>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetExperimentKey(System.Int32,System.Action{System.Collections.Generic.List{System.String}})">
+            <summary>
+            获取该实验的所有Key
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DeleteExperimentKey(System.String,System.Action{System.Boolean})">
+            <summary>
+            删除实验的Key
+            </summary>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DeleteExperimentKey(System.Int32,System.String,System.Action{System.Boolean})">
+            <summary>
+            删除实验的Key
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadGlobalText(System.String,System.String,System.Action{System.String})">
+            <summary>
+            上传全局用户数据
+            </summary>
+            <param name="key">文本标识</param>
+            <param name="data">文本内容</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadGlobalText(System.Int32,System.Int32,System.String,System.String,System.Action{System.String})">
+            <summary>
+            上传全局用户数据
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="courseId">课程ID</param>
+            <param name="key">文本标识</param>
+            <param name="data">文本内容</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadGlobalText(System.String,System.Action{System.String})">
+            <summary>
+            获取全局用户数据
+            </summary>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadGlobalText(System.Int32,System.Int32,System.String,System.Action{System.String})">
+            <summary>
+            获取全局用户数据（实验数据读取）
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="courseId">课程ID</param>
+            <param name="key">文本标识</param>
+            <param name="responseAction">响应事件 </param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadImage(System.String,System.Action{UnityEngine.Texture2D})">
+            <summary>
+            下载图片
+            </summary>
+            <param name="urls"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadFile(System.String,System.Action{System.Byte[]})">
+            <summary>
+            下载文件
+            </summary>
+            <param name="urls"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadImage(UnityEngine.Texture2D,System.Action{System.String})">
+            <summary>
+            上传图片
+            </summary>
+            <param name="texture">图片</param>
+            <param name="tryTime">上传尝试次数</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadFile(System.Byte[],System.String,System.Action{System.String})">
+            <summary>
+            上传文件
+            </summary>
+            <param name="texture">图片</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadBeginMoniter">
+            <summary>
+            上传 打开链接时间 实验加载完时间
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadExitMoniter">
+            <summary>
+            实验退出 上传 实验关闭时间
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.StartRecording(System.Action{System.Boolean})">
+            <summary>
+            开始录音
+            </summary>
+            <param name="callback"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.StopRecording">
+            <summary>
+            结束录音
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.PlayRecording(System.Action{System.Single})">
+            <summary>
+            播放录音
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.StopPlay">
+            <summary>
+            停止播放
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.PausePlay">
+            <summary>
+            暂停播放
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.ContinuePlay">
+            <summary>
+            继续播放
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadRecording(System.Action{WisdomTree.Common.Function.Communication.File})">
+            <summary>
+            上传录音
+            </summary>
+            <param name="callback"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.StartRecordScreen">
+            <summary>
+            开始录屏
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.StopRecordScreen">
+            <summary>
+            结束录屏
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DownloadRecordScreen">
+            <summary>
+            下载录屏到本地
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadRecordScreen(System.Action{WisdomTree.Common.Function.Communication.File},System.Action{System.String})">
+            <summary>
+            上传录屏到服务器 回调返回
+            </summary>
+            <param name="responceCallBack">上传成功 返回视频URL</param>
+            <param name="errorCallBack">上传失败 回调</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReportBase(WisdomTree.Common.Function.Report,System.Action{System.String})">
+            <summary>
+            最基本的上传
+            </summary>
+            <param name="experimentReport">实验报告</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReportSchoolBase(WisdomTree.Common.Function.Report,System.Action{System.String})">
+            <summary>
+            最基本的上传 -校级平台
+            </summary>
+            <param name="experimentReport">实验报告</param>
+            <param name="responseAction">响应事件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReportBase(System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Int64,System.Int64,System.Double,System.String,WisdomTree.Common.Function.Model[],WisdomTree.Common.Function.Step[],System.Action{System.String},System.Int32,System.String)">
+            <summary>
+            基础上传方法
+            </summary>
+            <param name="uuid"></param>
+            <param name="experimentId"></param>
+            <param name="courseId"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <param name="score"></param>
+            <param name="reportSummary"></param>
+            <param name="reportModels"></param>
+            <param name="responseAction"></param>
+            <param name="status"></param>
+            <param name="reportName">报告名称(课程主页显示用)</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReportBase(System.DateTime,System.DateTime,System.Double,System.String,WisdomTree.Common.Function.Model[],WisdomTree.Common.Function.Step[],System.Action{System.String},System.Int32,System.String)">
+            <summary>
+            花式上传的基本方法
+            </summary>
+            <param name="startTime">实验开始时间</param>
+            <param name="endTime">实验结束时间</param>
+            <param name="score">分数</param>
+            <param name="reportSummary">实验报告总结</param>
+            <param name="steps">步骤</param>
+            <param name="reportModels">模块</param>
+            <param name="responseAction">响应事件</param>
+            <param name="reportName">报告名称(课程主页显示用)</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReport(System.Double,System.Action{System.String},System.String)">
+            <summary>
+            上传实验报告（只上传分数）
+            </summary>
+            <param name="score">分数</param>
+            <param name="responseAction">响应事件</param>
+            <param name="reportName">报告名称(课程主页显示用)</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReport(System.Double,System.String,System.Action{System.String},WisdomTree.Common.Function.Model[])">
+            <summary>
+            上传实验报告
+            </summary>
+            <param name="score">分数</param>
+            <param name="reportSummary">实验报告总结</param>
+            <param name="responseAction">响应事件</param>
+            <param name="reportModels">模块</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReport(System.Double,System.String,System.Action{System.String},System.String,WisdomTree.Common.Function.Model[])">
+            <summary>
+            上传实验报告
+            </summary>
+            <param name="score">分数</param>
+            <param name="reportSummary">实验报告总结</param>
+            <param name="responseAction">响应事件</param>
+            <param name="reportName">报告名称(课程主页显示用)</param>
+            <param name="reportModels">模块</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReport(System.Double,System.String,System.Action{System.String},WisdomTree.Common.Function.Step[],WisdomTree.Common.Function.Model[])">
+            <summary>
+            上传实验报告（需要对接ilab）
+            </summary>
+            <param name="score">分数</param>
+            <param name="reportSummary">实验报告总结</param>
+            <param name="responseAction">响应事件</param>
+            <param name="steps">步骤（ilab对接内容，需提供十步以上）</param>
+            <param name="reportModels">模块</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReport(System.Double,System.String,System.String,System.Action{System.String},WisdomTree.Common.Function.Step[],WisdomTree.Common.Function.Model[])">
+            <summary>
+            上传实验报告（需要对接ilab）
+            </summary>
+            <param name="score">分数</param>
+            <param name="reportSummary">实验报告总结</param>
+            <param name="responseAction">响应事件</param>
+            <param name="steps">步骤（ilab对接内容，需提供十步以上）</param>
+            <param name="reportName">报告名称(课程主页显示用)</param>
+            <param name="reportModels">模块</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReportByExperimentId(System.Int32,System.Double,System.String,System.Action{System.String},WisdomTree.Common.Function.Step[],WisdomTree.Common.Function.Model[])">
+            <summary>
+            上传实验报告
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="score">分数</param>
+            <param name="reportSummary">实验报告总结</param>
+            <param name="responseAction">响应事件</param>
+            <param name="steps">步骤</param>
+            <param name="reportModels">模块</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.UploadReportByExperimentId(System.Int32,System.Double,System.String,System.String,System.Action{System.String},WisdomTree.Common.Function.Step[],WisdomTree.Common.Function.Model[])">
+            <summary>
+            上传实验报告
+            </summary>
+            <param name="experimentId">实验ID</param>
+            <param name="score">分数</param>
+            <param name="reportSummary">实验报告总结</param>
+            <param name="responseAction">响应事件</param>
+            <param name="steps">步骤</param>
+            <param name="reportName">报告名称(课程主页显示用)</param>
+            <param name="reportModels">模块</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.OpenWebReport(System.String)">
+            <summary>
+            打开实验报告
+            </summary>
+            <param name="urlReport">报告链接</param>
+            <param name="isOnBlankPage">是否在新页面打开</param>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Communication._Model">
+            <summary>
+            实验报告模块
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Model.name">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Model.reportContents">
+            <summary>
+            实验报告内容
+            </summary>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Communication._Content">
+            <summary>
+            实验报告模块内容
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Content.name">
+            <summary>
+            图表名称
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Content.images">
+            <summary>
+            图片url（解析imagesForUser自动添加，不需要传参）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Content.imageType">
+            <summary>
+            图片类型(static 静态图, dynamic 动态图（多张轮播）, none 无图)
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Content.type">
+            <summary>
+            报告类型，为"inputs"或"script"，其中"inputs"和"script"只有一个有内容另一个传空字符串
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Content.inputs">
+            <summary>
+            填写参数
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication._Content.script">
+            <summary>
+            自主编程脚本，需要把脚本字符串中的"都改为'，双引号都改为单引号    （无脚本需求时，默认为文本内容）
+            </summary>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Communication.File">
+            <summary>
+            文件类（用于音频、视频、文本、可预览文件等的上传）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.File.fileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.File.url">
+            <summary>
+            文件链接
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.File.type">
+            <summary>
+            文件类型 1:音频、2:视频、3:图片、4:可预览文档、0:其它
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.File.fileID">
+            <summary>
+            文件ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.File.fileOrder">
+            <summary>
+            文件序号
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.studentId">
+            <summary>
+            学生ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.studentName">
+            <summary>
+            学生姓名
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.classId">
+            <summary>
+            班级ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.className">
+            <summary>
+            班级名
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.collegeId">
+            <summary>
+            学院ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.collegeName">
+            <summary>
+            学院名
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.schoolId">
+            <summary>
+            学校ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.schoolName">
+            <summary>
+            学校名
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.phoneNumber">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.courseId">
+            <summary>
+            课程ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.termId">
+            <summary>
+            学期ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.StudentInformation.uuid">
+            <summary>
+            _UUID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.UserInformation.classId">
+            <summary>
+            班级ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.UserInformation.collegeId">
+            <summary>
+            学院ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.UserInformation.userName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Communication.UserInformation.userCode">
+            <summary>
+            学号
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetTime(System.Action{System.String},System.String)">
+            <summary>
+            获取时间（服务器获取失败则取本地时间）
+            </summary>
+            <param name="responseAction">当前时间</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.ConvertStringToDateTime(System.Int64)">
+            <summary>
+            时间戳转时间
+            </summary>
+            <param name="timeStamp">时间戳</param>
+            <returns></returns>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetTimestamp(System.Action{System.Int64})">
+            <summary>
+            获取时间戳
+            </summary>
+            <param name="responseAction"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.DateTimeToTimestamp(System.DateTime)">
+            <summary>
+            时间转时间戳
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.QueryUserInformationByUUID(System.String,System.Action{WisdomTree.Common.Function.Communication.UserInformation},System.Action{System.String})">
+            <summary>
+            通过UUID获取用户信息
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="responseAction">回调</param>
+            <param name="errorAction">请求错误回调</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.QueryUserNameByUUID(System.String,System.Action{System.String},System.Action{System.String})">
+            <summary>
+            通过UUID获取用户名
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="responseAction">回调</param>
+            <param name="errorAction">请求错误回调</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.QueryIlabUserName(System.Action{System.String},System.Action{System.String})">
+            <summary>
+            获取 Ilab 用户名
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetHead(System.String,System.Action{UnityEngine.Sprite})">
+            <summary>
+            获取头像（Sprite）
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="responseAction">回调</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetHead(System.String,System.Action{UnityEngine.Texture2D})">
+            <summary>
+            获取头像（Texture2D）
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="responseAction">回调</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetHeadURL(System.String,System.Action{System.String})">
+            <summary>
+            获取头像的url
+            </summary>
+            <param name="uuid">用户ID</param>
+            <param name="responseAction">回调</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetUserRole(System.Action{System.Int32})">
+            <summary>
+            获取用户角色
+            </summary>
+            <param name="uuid"></param>
+            <param name="courseId"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetUserName(System.Action{System.String},System.Action{System.String})">
+            <summary>
+            获取用户名字
+            </summary>
+            <param name="responseAction"></param>
+            <param name="errorAction"></param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Communication.GetUserHead(System.Action{UnityEngine.Texture2D})">
+            <summary>
+            获取用户头像
+            </summary>
+            <param name="responseAction"></param>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Report">
+            <summary>
+            实验报告
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.uuid">
+            <summary>
+            登陆验证的时候会获取到
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.experimentId">
+            <summary>
+            实验ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.courseId">
+            <summary>
+            课程ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.stepId">
+            <summary>
+            步骤ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.taskId">
+            <summary>
+            任务ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.recordId">
+            <summary>
+            实验报告 记录ID
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.platformType">
+            <summary>
+            对接平台 1：重庆市级平台 0：Ilab+其他省区平台
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.startTime">
+            <summary>
+            实验开始时间，时间戳
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.endTime">
+            <summary>
+            实验结束时间，时间戳
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.timeUsed">
+            <summary>
+            实验用时（单位秒）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.status">
+            <summary>
+            实验结果（1 - 完成；2 - 未完成）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.score">
+            <summary>
+            分数
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.appid">
+            <summary>
+            由“实验空间”分配给实验教学项目的编号
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.secret">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.steps">
+            <summary>
+            步骤详情
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.ReportSummary">
+            <summary>
+            实验报告总结
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.reportModels">
+            <summary>
+            实验报告模块
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Report.reportName">
+            <summary>
+            报告名称(课程主页显示用)
+            </summary>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Model">
+            <summary>
+            实验报告模块
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Model.#ctor(System.String,WisdomTree.Common.Function.Content[])">
+            <summary>
+            一级菜单
+            </summary>
+            <param name="name">一级菜单标题</param>
+            <param name="contentBuilders">一级菜单内容</param>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Content">
+            <summary>
+            实验报告模块内容
+            </summary>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Content.ImageType">
+            <summary>
+            图片类型
+            </summary>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Content.Type">
+            <summary>
+            报告类型
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Content.name">
+            <summary>
+            图表名称
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Content.images">
+            <summary>
+            图片url（解析imagesForUser自动添加，不需要传参）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Content.imageType">
+            <summary>
+            图片类型(static 静态图, dynamic 动态图（多张轮播）, none 无图)
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Content.type">
+            <summary>
+            报告类型，为"inputs"或"script"，其中"inputs"和"script"只有一个有内容另一个传空字符串
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Content.inputs">
+            <summary>
+            填写参数
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Content.script">
+            <summary>
+            自主编程脚本，需要把脚本字符串中的"都改为'，双引号都改为单引号    （无脚本需求时，默认为文本内容）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Content.datas">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,UnityEngine.Texture2D)">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="image">图片内容</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,UnityEngine.Texture2D[],WisdomTree.Common.Function.Content.ImageType)">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="images">图片序列</param>
+            <param name="imageType">图片类型（动图，多图）</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="inputs">键值对内容</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,System.String)">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,UnityEngine.Texture2D,System.String)">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="image">图片内容</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,UnityEngine.Texture2D[],WisdomTree.Common.Function.Content.ImageType,System.String)">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="images">图片序列</param>
+            <param name="imageType">图片类型（动图，多图）</param>
+            <param name="text">文本内容</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,UnityEngine.Texture2D,System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="image">图片内容</param>
+            <param name="inputs">键值对内容</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,System.ValueTuple{System.String,System.Byte[]}[])">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="datas">文件</param>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Content.#ctor(System.String,WisdomTree.Common.Function.Communication.File[])">
+            <summary>
+            二级菜单
+            </summary>
+            <param name="name">二级菜单标题</param>
+            <param name="files">文件</param>
+        </member>
+        <member name="T:WisdomTree.Common.Function.Step">
+            <summary>
+            步骤详情
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.seq">
+            <summary>
+            实验步骤序号
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.title">
+            <summary>
+            步骤名称（20字以内）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.startTime">
+            <summary>
+            实验步骤开始时间
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.endTime">
+            <summary>
+            实验步骤结束时间
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.timeUsed">
+            <summary>
+            实验步骤用时（单位秒）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.expectTime">
+            <summary>
+            实验步骤合理用时（单位秒）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.score">
+            <summary>
+            实验步骤得分（0 ~100，百分制）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.maxScore">
+            <summary>
+            实验步骤满分（0 ~100，百分制）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.repeatCount">
+            <summary>
+            实验步骤操作次数
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.evaluation">
+            <summary>
+            步骤评价（200字以内）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.scoringModel">
+            <summary>
+            赋分模型（200字以内）
+            </summary>
+        </member>
+        <member name="F:WisdomTree.Common.Function.Step.remarks">
+            <summary>
+            备注（200字以内）
+            </summary>
+        </member>
+        <member name="M:WisdomTree.Common.Function.Step.#ctor(System.Int32,System.String,System.DateTime,System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="seq">实验步骤序号</param>
+            <param name="title">步骤名称（20字以内）</param>
+            <param name="startTime">实验步骤开始时间</param>
+            <param name="endTime">实验步骤结束时间</param>
+            <param name="expectTime">实验步骤合理用时（单位秒）</param>
+            <param name="score">实验步骤得分</param>
+            <param name="maxScore">实验步骤满分</param>
+            <param name="repeatCount">实验步骤操作次数</param>
+            <param name="evaluation">步骤评价</param>
+            <param name="scoringModel">赋分模型</param>
+            <param name="remarks">备注</param>
+        </member>
+    </members>
+</doc>

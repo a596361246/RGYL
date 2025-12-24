@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content=%Author%>
+    <meta name="version" content=%BundleVersion%>
+    <meta name="experimentId" content=>
+    <meta name="courseId" content=>
+    <meta name="appId" content=>
+    <meta name="secret" content=>
+
+    <meta name="tipContent" content='实验加载中......'>
+    <meta name="tipColor" content='#ffffffff'>
+    <meta name="progressColor" content='#ffffffff'>
+    <meta name="circleColor" content=''>
+	<meta name="dataCommunicationVersion" content=%DataCommunicationVersion%>
+    <title>虚拟实验</title>
+    <link rel="shortcut icon" href="Build/favicon.ico">
+    <link rel="stylesheet" href="Build/style.css">
+    <script src="Build/UnityProgress.js"></script>
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script src="Build/Common.js"></script>
+    <script>
+	  console.log('WebGLTemplates 1.1.12')
+      var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 100vw; height: 102vh"></div>   
+      <label id="version" style="position: relative; left: 90%; bottom: 50px; color: #ffffff; background-color:rgba(0,0,0,0);">#VersionLabel#</label>
+      <label id="explanation" style="position: relative; left: 0%; bottom: 50px; color: #ffffff; "></label>
+    </div>
+  </body>
+</html>

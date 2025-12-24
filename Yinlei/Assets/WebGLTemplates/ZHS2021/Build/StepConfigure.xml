@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- ID 步骤ID 唯一标识不可重复 string -->
+<!-- Tittle 步骤标题 string-->
+<!-- Introduce 步骤简介 string-->
+<!-- Introduce 步骤简介 string-->
+<!-- FullMark 步骤满分 double-->
+<!-- Duration 建议时长(分钟) double-->
+<!-- ScoringModel 赋分模型 string-->
+<Root>
+<!--   <Step ID="0">
+  	<Tittle>步骤标题</Tittle>
+  	<Introduce>步骤简介</Introduce>
+  	<Duration>10.5</Duration>
+  	<FullMark>2.5</FullMark>
+  	<ScoringModel>赋分模型</ScoringModel>
+  </Step>
+
+  <Step ID="1">
+  	<Tittle>步骤标题1</Tittle>
+  	<Introduce>步骤简介1</Introduce>
+  	<Duration>10.5</Duration>
+  	<FullMark>2.5</FullMark>
+  	<ScoringModel>赋分模型1</ScoringModel>
+  </Step>
+
+  <Step ID="2">
+  	<Tittle>步骤标题2</Tittle>
+  	<Introduce>步骤简介2</Introduce>
+  	<Duration>10.5</Duration>
+  	<FullMark>2.5</FullMark>
+  	<ScoringModel>赋分模型2</ScoringModel>
+  </Step> -->
+</Root>
